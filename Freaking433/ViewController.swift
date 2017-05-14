@@ -26,15 +26,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
+        
         return emojis.count // Number of elements in the emojis array
-    
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell() // Create empty cell
-        cell.textLabel?.text = emojis[indexPath.row]
+        cell.textLabel?.text = emojis[indexPath.row] // Collect element from array, E0->C0,E1->C1 etc
         return cell // Return cell
         
     }
