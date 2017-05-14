@@ -12,12 +12,36 @@ class DefinitionViewController: UIViewController {
     
     @IBOutlet weak var emojiLabel: UILabel!
     
+    @IBOutlet weak var definitionLabel: UILabel!
+    
+    
     var emoji = "No emoji"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         emojiLabel.text = emoji
+        
+        switch emoji {
+            
+        case "😀":
+            definitionLabel.text = "Smile!!!"
+        case "😎":
+            definitionLabel.text = "Shades. Cool."
+        case "🦋":
+            definitionLabel.text = "Butterfly"
+        case "🌈":
+            definitionLabel.text = "Under the rainbow."
+        case "🍺":
+            definitionLabel.text = "Santé!"
+        case "🎲":
+            definitionLabel.text = "Good luck!"
+        case "🇳🇿":
+            definitionLabel.text = "Aotearoa"
+        default:
+            definitionLabel.text = "No emoji picked."
+        
+        }
         
         // Do any additional setup after loading the view.
     }

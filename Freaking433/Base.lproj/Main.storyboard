@@ -57,13 +57,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="📙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyg-7V-Nul">
-                                <rect key="frame" x="79" y="114" width="162" height="115"/>
+                                <rect key="frame" x="79" y="114" width="162" height="178"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="149"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orange Journal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1f-YP-yUE">
-                                <rect key="frame" x="101" y="274" width="118" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyy-d1-pNS">
+                                <rect key="frame" x="60" y="327" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="GHg-Wi-Dl6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -72,13 +75,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hyg-7V-Nul" firstAttribute="top" secondItem="Kvl-wo-WBe" secondAttribute="bottom" constant="50" id="15f-XW-dEu"/>
-                            <constraint firstItem="V1f-YP-yUE" firstAttribute="centerY" secondItem="ApS-sN-4nG" secondAttribute="centerY" id="2yA-CM-gAP"/>
                             <constraint firstItem="hyg-7V-Nul" firstAttribute="centerX" secondItem="ApS-sN-4nG" secondAttribute="centerX" id="D9T-dh-MgP"/>
-                            <constraint firstItem="V1f-YP-yUE" firstAttribute="centerX" secondItem="ApS-sN-4nG" secondAttribute="centerX" id="Ead-cp-axi"/>
-                            <constraint firstItem="V1f-YP-yUE" firstAttribute="top" secondItem="hyg-7V-Nul" secondAttribute="bottom" constant="45" id="anR-Ql-0YI"/>
+                            <constraint firstItem="Wyy-d1-pNS" firstAttribute="centerX" secondItem="ApS-sN-4nG" secondAttribute="centerX" id="sQS-bd-tyV"/>
+                            <constraint firstItem="Wyy-d1-pNS" firstAttribute="top" secondItem="hyg-7V-Nul" secondAttribute="bottom" constant="35" id="ucq-jl-AD6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="definitionLabel" destination="Wyy-d1-pNS" id="uKd-7W-J23"/>
                         <outlet property="emojiLabel" destination="hyg-7V-Nul" id="ZtS-G1-RJi"/>
                     </connections>
                 </viewController>
