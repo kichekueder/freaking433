@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var mainTableView: UITableView!
     
-    var emojis = ["😀","😎","🦋","🌈","🍺","🎲","🇳🇿"] // Array of emojis
+    var emojis : [Emoji] = [] // Declare only an array of class Emoji
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         mainTableView.dataSource = self // how many rows
         mainTableView.delegate = self // what goes into rows
+        emojis = makeEmojiArray() // create the Emojis array from the method below.
         
     }
     
@@ -34,7 +35,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell() // Create empty cell
-        cell.textLabel?.text = emojis[indexPath.row] // Collect element from array, E0->C0,E1->C1 etc
+        let emoji = emojis[indexPath.row] // Assign emoji from Array created through method
+        cell.textLabel?.text = emoji.stringEmoji // Collect label from array
         return cell // Return cell
         
     }
@@ -59,8 +61,52 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
+    func makeEmojiArray() -> [Emoji] {
+        
+        let emoji1 = Emoji()
+        emoji1.stringEmoji = "😀"
+        emoji1.category = "Smiley"
+        emoji1.creationYear = 2001
+        emoji1.definition = "Smile!!!"
+        
+        let emoji2 = Emoji()
+        emoji2.stringEmoji = "😎"
+        emoji2.category = "Smiley"
+        emoji2.creationYear = 2007
+        emoji2.definition = "Cool"
+        
+        let emoji3 = Emoji()
+        emoji3.stringEmoji = "🦋"
+        emoji3.category = "Animal"
+        emoji3.creationYear = 2011
+        emoji3.definition = "Butterfly"
+        
+        let emoji4 = Emoji()
+        emoji4.stringEmoji = "🌈"
+        emoji4.category = "Symbol"
+        emoji4.creationYear = 2013
+        emoji4.definition = "Under the rainbow."
+        
+        let emoji5 = Emoji()
+        emoji5.stringEmoji = "🍺"
+        emoji5.category = "Entertainment"
+        emoji5.creationYear = 2010
+        emoji5.definition = "Santé!"
+        
+        let emoji6 = Emoji()
+        emoji6.stringEmoji = "🎲"
+        emoji6.category = "Entertainment"
+        emoji6.creationYear = 2014
+        emoji6.definition = "Good Luck!"
+        
+        let emoji7 = Emoji()
+        emoji7.stringEmoji = "🇳🇿"
+        emoji7.category = "Flag"
+        emoji7.creationYear = 2015
+        emoji7.definition = "Aotearoa"
+        
+        return [emoji1, emoji2, emoji3, emoji4, emoji5, emoji6, emoji7]
+        
+    }
     
 }
-
