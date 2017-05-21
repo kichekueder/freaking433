@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PZT-vX-jYd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PZT-vX-jYd">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -71,16 +71,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Smiley" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuL-vw-3fd">
+                                <rect key="frame" x="60" y="368" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Mbq-nc-sje"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created in: 2010" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="is4-qU-2Ug">
+                                <rect key="frame" x="60" y="399" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="hjQ-9k-lJi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hyg-7V-Nul" firstAttribute="top" secondItem="Kvl-wo-WBe" secondAttribute="bottom" constant="50" id="15f-XW-dEu"/>
+                            <constraint firstItem="cuL-vw-3fd" firstAttribute="centerX" secondItem="ApS-sN-4nG" secondAttribute="centerX" id="6je-np-G3e"/>
                             <constraint firstItem="hyg-7V-Nul" firstAttribute="centerX" secondItem="ApS-sN-4nG" secondAttribute="centerX" id="D9T-dh-MgP"/>
+                            <constraint firstItem="is4-qU-2Ug" firstAttribute="centerX" secondItem="ApS-sN-4nG" secondAttribute="centerX" id="Yh6-Nr-xDt"/>
+                            <constraint firstItem="cuL-vw-3fd" firstAttribute="top" secondItem="Wyy-d1-pNS" secondAttribute="bottom" constant="20" id="brv-MM-gEf"/>
+                            <constraint firstItem="cuL-vw-3fd" firstAttribute="leading" secondItem="Wyy-d1-pNS" secondAttribute="trailing" constant="-200" id="d9w-kU-7gB"/>
+                            <constraint firstItem="is4-qU-2Ug" firstAttribute="top" secondItem="cuL-vw-3fd" secondAttribute="bottom" constant="10" id="fmh-8a-mtj"/>
                             <constraint firstItem="Wyy-d1-pNS" firstAttribute="centerX" secondItem="ApS-sN-4nG" secondAttribute="centerX" id="sQS-bd-tyV"/>
                             <constraint firstItem="Wyy-d1-pNS" firstAttribute="top" secondItem="hyg-7V-Nul" secondAttribute="bottom" constant="35" id="ucq-jl-AD6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categoryLabel" destination="cuL-vw-3fd" id="5bA-Df-bN6"/>
+                        <outlet property="creationYearLabel" destination="is4-qU-2Ug" id="i5R-4d-sl7"/>
                         <outlet property="definitionLabel" destination="Wyy-d1-pNS" id="uKd-7W-J23"/>
                         <outlet property="emojiLabel" destination="hyg-7V-Nul" id="ZtS-G1-RJi"/>
                     </connections>
